@@ -1,12 +1,20 @@
 import React from 'react';
-import Bird from '../img/parrot.jpeg';
+const { useState } = React;
 
-function HornedBeast(props) {
+function HornedBeast({image_url, title, description}) {
+  const handleClick = () => {
+    setCounter(counter + 1);
+  };
+
+  const [counter, setCounter] = useState(0);
+
+
     return (
     <>
-      <h2>{props.title}</h2>
-      <img height="500px" src={props.imgurl} alt="Parrot" title="Parrot"/>
-      <p>{props.desc}</p>
+      <h2>{title}</h2>
+      <img height="500px" src={image_url} alt="Parrot" title="Parrot"/>
+      <p>{description}</p>
+      <button onClick={handleClick}>Favorite{counter}</button>
       </>
     )
 }
