@@ -1,5 +1,7 @@
 import React from 'react';
+import { BsFillHeartFill } from 'react-icons/bs'
 const { useState } = React;
+
 
 function HornedBeast({image_url, title, description}) {
   const handleClick = () => {
@@ -21,7 +23,7 @@ function HornedBeast({image_url, title, description}) {
         onClick={handleClick}
         title="Parrot">
         </img>
-      
+        <BsFillHeartFill/>
         {counter}
       </button>
       </>
