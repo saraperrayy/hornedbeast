@@ -1,8 +1,8 @@
 import React from 'react';
 
 import HornedBeast from './HornedBeast';
-import Bird from '../img/parrot.jpeg';
-import Bee from '../img/bee.jpg';
+// import Bird from '../img/parrot.jpeg';
+// import Bee from '../img/bee.jpg';
 import { animalData } from '../data';
 
 function Main() {
@@ -27,7 +27,7 @@ function Main() {
                 description={data.description}
               />
             </div>
-          )
+          );
           // <div key={key} ></div>
           // <HornedBeast image_url={image_url} title={title} description={description} />
         })}
