@@ -1,13 +1,69 @@
 import React from 'react';
-import Bird from '../img/parrot.jpeg';
+import { BsFillHeartFill } from 'react-icons/bs'
+import Button from 'react-bootstrap/Button';
+import { Container, Row, Col } from 'react-bootstrap';
+import Image from 'react-bootstrap/Image'
+const { useState } = React;
 
-function HornedBeast(props) {
+
+function HornedBeast({image_url, title, description}) {
+  const handleClick = () => {
+    setCounter(counter + 1);
+  };
+
+  const [counter, setCounter] = useState(0);
+
+
     return (
-    <>
-      <h2>{props.title}</h2>
-      <img height="500px" src={props.imgurl} alt="Parrot" title="Parrot"/>
-      <p>{props.desc}</p>
-      </>
+      <Container>
+        <Row>
+          <Col>
+            <Button className="bg-transparent border-0">
+              <Image
+              src={image_url}
+              onClick={handleClick}
+              className="img-fluid"/>
+            </Button>
+          </Col>
+
+          <Col xs={12}>
+            <Col>
+            <BsFillHeartFill/>
+            </Col>
+
+            <Col>
+            {counter}
+            </Col>
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={12}>
+            <h2>
+              {title}
+            </h2>
+          </Col>
+          <Col>
+            <p>
+              {description}
+            </p>
+          </Col>
+        </Row>
+      </Container>
+    // <>
+    //   <h2>{title}</h2>
+    //   <p>{description}</p>
+    //   <button>
+    //     <img 
+    //     height="500px" 
+    //     src={image_url} 
+    //     alt="Parrot" 
+    //     onClick={handleClick}
+    //     title="Parrot">
+    //     </img>
+    //     <BsFillHeartFill/>
+    //     {counter}
+    //   </button>
+    //   </>
     )
 }
 export default HornedBeast;
