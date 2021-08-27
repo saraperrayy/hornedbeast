@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
+import { animalData } from './data';
 
 
 function App() {
@@ -17,4 +18,4 @@ function App() {
   );
 }
 
-// export default App;
+export default App;
